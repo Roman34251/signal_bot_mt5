@@ -79,3 +79,63 @@
 2026-07-09 19:06:07,273 [INFO] main: P(buy)=0.415 P(sell)=0.418 поріг=0.65 ціна=4126.48
 2026-07-09 19:06:37,295 [INFO] main: P(buy)=0.388 P(sell)=0.471 поріг=0.65 ціна=4127.10
 2026-07-09 19:07:07,314 [INFO] main: P(buy)=0.394 P(sell)=0.428 поріг=0.65 ціна=4126.85
+2026-07-09 19:13:12,924 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-09 19:13:14,284 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-09 19:13:14,368 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-09 19:13:14,372 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-09 19:13:14,807 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-09 19:13:14,809 [ERROR] main: Неочікувана помилка в основному циклі: send_text() got an unexpected keyword argument 'chat_id'
+Traceback (most recent call last):
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\main.py", line 163, in main
+    command_poller.poll(client)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 181, in poll
+    self._send_private_mode_message(chat_id)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 53, in _send_private_mode_message
+    telegram_publisher.send_text_to_chat(
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_publisher.py", line 113, in send_text_to_chat
+    return send_text(text=text, chat_id=chat_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_text() got an unexpected keyword argument 'chat_id'
+2026-07-09 19:13:17,197 [INFO] telegram_commands: Telegram command: /start from chat_id=909089071
+2026-07-09 19:13:17,197 [ERROR] main: Неочікувана помилка в основному циклі: send_text() got an unexpected keyword argument 'chat_id'
+Traceback (most recent call last):
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\main.py", line 163, in main
+    command_poller.poll(client)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 185, in poll
+    self._handle_start(chat_id)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 74, in _handle_start
+    telegram_publisher.send_text_to_chat(chat_id, text)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_publisher.py", line 113, in send_text_to_chat
+    return send_text(text=text, chat_id=chat_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_text() got an unexpected keyword argument 'chat_id'
+2026-07-09 19:13:19,614 [INFO] telegram_commands: Telegram command: /start from chat_id=909089071
+2026-07-09 19:13:19,617 [ERROR] main: Неочікувана помилка в основному циклі: send_text() got an unexpected keyword argument 'chat_id'
+Traceback (most recent call last):
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\main.py", line 163, in main
+    command_poller.poll(client)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 185, in poll
+    self._handle_start(chat_id)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 74, in _handle_start
+    telegram_publisher.send_text_to_chat(chat_id, text)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_publisher.py", line 113, in send_text_to_chat
+    return send_text(text=text, chat_id=chat_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_text() got an unexpected keyword argument 'chat_id'
+2026-07-09 19:13:22,029 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-09 19:13:22,030 [ERROR] main: Неочікувана помилка в основному циклі: send_text() got an unexpected keyword argument 'chat_id'
+Traceback (most recent call last):
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\main.py", line 163, in main
+    command_poller.poll(client)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 181, in poll
+    self._send_private_mode_message(chat_id)
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_commands.py", line 53, in _send_private_mode_message
+    telegram_publisher.send_text_to_chat(
+  File "C:\Users\rgrad\OneDrive\Робочий стіл\signal_bot_mt5\telegram_publisher.py", line 113, in send_text_to_chat
+    return send_text(text=text, chat_id=chat_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_text() got an unexpected keyword argument 'chat_id'
+2026-07-09 19:13:24,453 [INFO] main: P(buy)=0.466 P(sell)=0.372 поріг=0.65 ціна=4130.15
+2026-07-09 19:13:56,297 [INFO] main: P(buy)=0.460 P(sell)=0.390 поріг=0.65 ціна=4130.74
+2026-07-09 19:14:29,777 [INFO] main: P(buy)=0.469 P(sell)=0.416 поріг=0.65 ціна=4131.04
+2026-07-09 19:15:03,258 [INFO] main: P(buy)=0.467 P(sell)=0.366 поріг=0.65 ціна=4129.92
