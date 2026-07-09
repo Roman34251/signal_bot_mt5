@@ -80,6 +80,11 @@ class LevelsConfig:
 class TelegramConfig:
     bot_token: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
     chat_id: str = os.getenv("TELEGRAM_CHAT_ID", "")
+
+    # Якщо true — будь-хто може писати /start і /price.
+    # Якщо false — команди приймаються тільки від TELEGRAM_CHAT_ID.
+    public_commands: bool = _get_bool("TELEGRAM_PUBLIC_COMMANDS", False)
+
     # Чи слати heartbeat "бот працює" раз на N хвилин
     heartbeat_enabled: bool = _get_bool("TELEGRAM_HEARTBEAT_ENABLED", True)
     heartbeat_interval_min: int = _get_int("TELEGRAM_HEARTBEAT_INTERVAL_MIN", 60)
@@ -94,6 +99,7 @@ class GeneralConfig:
     log_level: str = os.getenv("LOG_LEVEL", "INFO")
 
 
+    
 mt5_cfg = MT5Config()
 model_cfg = ModelConfig()
 levels_cfg = LevelsConfig()

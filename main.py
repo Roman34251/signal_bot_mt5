@@ -13,16 +13,21 @@ main.py
      або через Task Scheduler ("At startup").
 """
 import argparse
+from http import client
 import logging
 import os
 import time
 from datetime import datetime, timezone
-
+from telegram_commands import TelegramCommandPoller
 from config import general_cfg, mt5_cfg, model_cfg, telegram_cfg
 from levels import calculate_levels
+from mt5_client import MT5ConnectionError
 import storage
 import telegram_publisher
-
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from mt5_client import MT5Client
+    from ml_model import SignalModel
 # Важкі залежності (pandas/xgboost/MetaTrader5) імпортуються ліниво всередині
 # live-режиму, щоб `python main.py --test-telegram` можна було запустити маючи
 # лише requests + python-dotenv (перевірка Telegram без MT5 і без моделі).
@@ -139,19 +144,32 @@ def main() -> None:
     storage.init_db()
 
     model = SignalModel(model_cfg.model_path, model_cfg.meta_path)
-    model.load()  # кине зрозумілу помилку, якщо train_model.py ще не запускали
+    model.load()
 
     client = MT5Client()
     client.connect()
 
+    from telegram_commands import TelegramCommandPoller
+    command_poller = TelegramCommandPoller()
+
     last_heartbeat = datetime.min.replace(tzinfo=timezone.utc)
+    last_market_poll = datetime.min.replace(tzinfo=timezone.utc)
 
     while True:
         try:
-            run_iteration(client, model)
+            now = datetime.now(timezone.utc)
 
+            # 1. Перевіряємо Telegram-команди часто
+            command_poller.poll(client)
+
+            # 2. Ринкову логіку запускаємо по MT5_POLL_INTERVAL_SEC
+            elapsed_market_sec = (now - last_market_poll).total_seconds()
+            if elapsed_market_sec >= mt5_cfg.poll_interval_sec:
+                run_iteration(client, model)
+                last_market_poll = now
+
+            # 3. Heartbeat
             if telegram_cfg.heartbeat_enabled:
-                now = datetime.now(timezone.utc)
                 elapsed_min = (now - last_heartbeat).total_seconds() / 60
                 if elapsed_min >= telegram_cfg.heartbeat_interval_min:
                     telegram_publisher.send_text(
@@ -162,11 +180,11 @@ def main() -> None:
 
         except MT5ConnectionError as e:
             logger.error("Проблема з MT5-з'єднанням: %s. Наступна спроба через паузу.", e)
-        except Exception as e:  # свідомо широкий except — бот не повинен падати назавжди
+        except Exception as e:
             logger.exception("Неочікувана помилка в основному циклі: %s", e)
 
-        time.sleep(mt5_cfg.poll_interval_sec)
+        time.sleep(2)
 
 
-if __name__ == "__main__":
-    main()
+
+ 
