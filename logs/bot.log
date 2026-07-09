@@ -1,0 +1,13 @@
+2026-07-09 15:01:44,061 [INFO] main: Self-test Telegram: шлю тестові повідомлення (MT5/модель не потрібні)
+2026-07-09 15:01:44,063 [ERROR] telegram_publisher: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID не задані в .env
+2026-07-09 15:01:44,063 [ERROR] main: Self-test НЕ пройдено (heartbeat=False, signal=False). Перевірте TELEGRAM_BOT_TOKEN і TELEGRAM_CHAT_ID у .env, а також що бота додано в чат/канал.
+2026-07-09 15:02:47,862 [INFO] main: Self-test Telegram: шлю тестові повідомлення (MT5/модель не потрібні)
+2026-07-09 15:02:47,863 [ERROR] telegram_publisher: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID не задані в .env
+2026-07-09 15:02:47,864 [ERROR] main: Self-test НЕ пройдено (heartbeat=False, signal=False). Перевірте TELEGRAM_BOT_TOKEN і TELEGRAM_CHAT_ID у .env, а також що бота додано в чат/канал.
+2026-07-09 15:15:01,756 [INFO] main: Self-test Telegram: шлю тестові повідомлення (MT5/модель не потрібні)
+2026-07-09 15:15:01,757 [ERROR] telegram_publisher: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID не задані в .env
+2026-07-09 15:15:01,757 [ERROR] main: Self-test НЕ пройдено (heartbeat=False, signal=False). Перевірте TELEGRAM_BOT_TOKEN і TELEGRAM_CHAT_ID у .env, а також що бота додано в чат/канал.
+2026-07-09 15:15:48,868 [INFO] main: Self-test Telegram: шлю тестові повідомлення (MT5/модель не потрібні)
+2026-07-09 15:15:53,521 [INFO] telegram_publisher: Сигнал BUY XAUUSD надіслано в Telegram
+2026-07-09 15:15:53,522 [INFO] main: Self-test УСПІШНИЙ — обидва повідомлення в Telegram. Перевірте чат.
+2026-07-09 15:20:12,993 [INFO] main: Запуск signal bot (MT5 + XGBoost)
