@@ -116,11 +116,20 @@ class MT5Client:
             self._connected = False
             self.connect()
 
-    def get_candles(self, count: Optional[int] = None) -> pd.DataFrame:
-        """Повертає DataFrame з колонками: time, open, high, low, close, tick_volume."""
+    def get_candles(
+        self, count: Optional[int] = None, include_forming: bool = False
+    ) -> pd.DataFrame:
+        """Повертає DataFrame з колонками: time, open, high, low, close, tick_volume.
+
+        За замовчуванням віддає ТІЛЬКИ ЗАКРИТІ свічки (start_pos=1).
+        Це критично: модель тренується на закритих барах, тож інференс на поточній
+        свічці, що ще формується, дає зміщені фічі (недоформовані body/тіні/momentum)
+        і ймовірності схлопуються до базової ставки — сигнали не генеруються ніколи.
+        """
         self.ensure_connected()
         n = count or mt5_cfg.bars_lookback
-        rates = mt5.copy_rates_from_pos(mt5_cfg.symbol, self._timeframe, 0, n)
+        start_pos = 0 if include_forming else 1
+        rates = mt5.copy_rates_from_pos(mt5_cfg.symbol, self._timeframe, start_pos, n)
         if rates is None or len(rates) == 0:
             raise MT5ConnectionError(
                 f"copy_rates_from_pos повернув порожній результат: {mt5.last_error()}"

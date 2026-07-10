@@ -19,7 +19,7 @@ import os
 import time
 from datetime import datetime, timezone
 from telegram_commands import TelegramCommandPoller
-from config import general_cfg, mt5_cfg, model_cfg, telegram_cfg
+from config import general_cfg, levels_cfg, mt5_cfg, model_cfg, telegram_cfg
 from levels import calculate_levels
 from mt5_client import MT5ConnectionError
 import storage
@@ -47,32 +47,46 @@ logging.basicConfig(
 logger = logging.getLogger("main")
 
 
-def run_iteration(client: "MT5Client", model: "SignalModel") -> None:
+def run_iteration(client: "MT5Client", model: "SignalModel", last_bar_time):
+    """Один прохід. Повертає час останньої обробленої закритої свічки.
+
+    Інференс робиться рівно один раз на кожну нову ЗАКРИТУ свічку: на H1 опитування
+    раз на 30с давало б 120 однакових прогнозів на годину.
+    """
     from features import build_features
 
-    df = client.get_candles()
+    df = client.get_candles()  # тільки закриті свічки
+    bar_time = df["time"].iloc[-1]
+    if bar_time == last_bar_time:
+        logger.debug("Нової закритої свічки ще немає (остання: %s)", bar_time)
+        return last_bar_time
+
     df_feat = build_features(df).dropna().reset_index(drop=True)
     if df_feat.empty:
         logger.warning("Недостатньо даних для розрахунку фіч цієї ітерації")
-        return
+        return last_bar_time
 
     last_row = df_feat.iloc[[-1]]
     prediction = model.predict(last_row)
     atr = float(last_row["atr_14"].iloc[0])
     tick = client.get_tick()
-    current_price = (tick.bid + tick.ask) / 2
+    spread = tick.ask - tick.bid
 
     logger.info(
-        "P(buy)=%.3f P(sell)=%.3f поріг=%.2f ціна=%.2f",
+        "Свічка %s | P(buy)=%.3f P(sell)=%.3f поріг=%.2f | bid=%.2f ask=%.2f spread=%.2f ATR=%.2f",
+        bar_time,
         prediction.probability_buy,
         prediction.probability_sell,
         model_cfg.probability_threshold,
-        current_price,
+        tick.bid,
+        tick.ask,
+        spread,
+        atr,
     )
 
     if storage.is_in_cooldown(mt5_cfg.symbol):
         logger.debug("Cooldown активний, сигнал пропущено")
-        return
+        return bar_time
 
     direction = None
     probability = 0.0
@@ -84,9 +98,24 @@ def run_iteration(client: "MT5Client", model: "SignalModel") -> None:
         probability = prediction.probability_sell
 
     if direction is None:
-        return
+        return bar_time
 
-    levels = calculate_levels(direction, current_price, atr)
+    # Обробка спреду: широкий спред з'їдає TP1 (0.8*ATR) — краще пропустити сигнал.
+    max_spread = atr * levels_cfg.max_spread_atr_ratio
+    if spread > max_spread:
+        logger.warning(
+            "Сигнал %s пропущено: спред %.2f > %.2f (%.0f%% від ATR %.2f)",
+            direction,
+            spread,
+            max_spread,
+            levels_cfg.max_spread_atr_ratio * 100,
+            atr,
+        )
+        return bar_time
+
+    # Вхід за реальною ціною виконання: BUY купуємо по ask, SELL продаємо по bid.
+    entry_price = tick.ask if direction == "BUY" else tick.bid
+    levels = calculate_levels(direction, entry_price, atr)
     signal_id = storage.save_signal(mt5_cfg.symbol, levels, probability)
     sent = telegram_publisher.send_signal(mt5_cfg.symbol, levels, probability)
     logger.info(
@@ -96,6 +125,7 @@ def run_iteration(client: "MT5Client", model: "SignalModel") -> None:
         mt5_cfg.symbol,
         "надіслано" if sent else "ПОМИЛКА відправки",
     )
+    return bar_time
 
 
 def self_test_telegram() -> None:
@@ -154,6 +184,7 @@ def main() -> None:
 
     last_heartbeat = datetime.min.replace(tzinfo=timezone.utc)
     last_market_poll = datetime.min.replace(tzinfo=timezone.utc)
+    last_bar_time = None
 
     while True:
         try:
@@ -165,18 +196,25 @@ def main() -> None:
             # 2. Ринкову логіку запускаємо по MT5_POLL_INTERVAL_SEC
             elapsed_market_sec = (now - last_market_poll).total_seconds()
             if elapsed_market_sec >= mt5_cfg.poll_interval_sec:
-                run_iteration(client, model)
+                last_bar_time = run_iteration(client, model, last_bar_time)
                 last_market_poll = now
 
             # 3. Heartbeat
             if telegram_cfg.heartbeat_enabled:
                 elapsed_min = (now - last_heartbeat).total_seconds() / 60
                 if elapsed_min >= telegram_cfg.heartbeat_interval_min:
-                    telegram_publisher.send_text(
-                        f"✅ Бот працює. {now.strftime('%Y-%m-%d %H:%M')} UTC"
-                    )
-                    storage.record_heartbeat()
+                    # last_heartbeat оновлюємо в будь-якому разі, інакше при
+                    # непрацюючому Telegram спроба повторювалась би щоітерації.
                     last_heartbeat = now
+                    if telegram_publisher.send_text(
+                        f"✅ Бот працює. {now.strftime('%Y-%m-%d %H:%M')} UTC"
+                    ):
+                        storage.record_heartbeat()
+                    else:
+                        logger.error(
+                            "Heartbeat НЕ доставлено в Telegram — перевірте "
+                            "TELEGRAM_CHAT_ID / TELEGRAM_BOT_TOKEN у .env"
+                        )
 
         except MT5ConnectionError as e:
             logger.error("Проблема з MT5-з'єднанням: %s. Наступна спроба через паузу.", e)

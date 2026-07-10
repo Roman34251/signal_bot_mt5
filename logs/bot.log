@@ -139,3 +139,293 @@ TypeError: send_text() got an unexpected keyword argument 'chat_id'
 2026-07-09 19:13:56,297 [INFO] main: P(buy)=0.460 P(sell)=0.390 поріг=0.65 ціна=4130.74
 2026-07-09 19:14:29,777 [INFO] main: P(buy)=0.469 P(sell)=0.416 поріг=0.65 ціна=4131.04
 2026-07-09 19:15:03,258 [INFO] main: P(buy)=0.467 P(sell)=0.366 поріг=0.65 ціна=4129.92
+2026-07-09 19:15:43,845 [INFO] main: P(buy)=0.434 P(sell)=0.465 поріг=0.65 ціна=4132.28
+2026-07-09 19:16:15,187 [INFO] main: P(buy)=0.457 P(sell)=0.391 поріг=0.65 ціна=4132.85
+2026-07-09 19:16:26,863 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-09 19:16:28,267 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-09 19:16:28,364 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-09 19:16:28,367 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-09 19:16:28,822 [INFO] main: P(buy)=0.456 P(sell)=0.363 поріг=0.65 ціна=4132.36
+2026-07-09 19:17:00,689 [INFO] main: P(buy)=0.456 P(sell)=0.378 поріг=0.65 ціна=4132.02
+2026-07-09 19:17:20,497 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-09 19:17:21,748 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-09 19:17:21,834 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-09 19:17:21,839 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-09 19:17:22,310 [INFO] main: P(buy)=0.456 P(sell)=0.384 поріг=0.65 ціна=4132.10
+2026-07-09 19:17:34,837 [INFO] telegram_commands: Telegram command: /start from chat_id=909089071
+2026-07-09 19:17:47,927 [INFO] telegram_commands: Telegram command: /price from chat_id=909089071
+2026-07-09 19:17:53,191 [INFO] telegram_commands: Telegram command: /help from chat_id=909089071
+2026-07-09 19:17:53,709 [INFO] main: P(buy)=0.449 P(sell)=0.372 поріг=0.65 ціна=4131.78
+2026-07-09 19:18:27,435 [INFO] main: P(buy)=0.435 P(sell)=0.461 поріг=0.65 ціна=4130.95
+2026-07-09 19:19:00,907 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-09 19:19:13,761 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-09 19:19:14,251 [INFO] main: P(buy)=0.459 P(sell)=0.423 поріг=0.65 ціна=4130.21
+2026-07-09 19:19:26,884 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-09 19:19:37,671 [INFO] main: P(buy)=0.463 P(sell)=0.412 поріг=0.65 ціна=4129.66
+2026-07-09 19:20:11,142 [INFO] main: P(buy)=0.464 P(sell)=0.408 поріг=0.65 ціна=4129.41
+2026-07-09 19:20:42,446 [INFO] main: P(buy)=0.451 P(sell)=0.419 поріг=0.65 ціна=4129.86
+2026-07-09 19:21:15,886 [INFO] main: P(buy)=0.459 P(sell)=0.401 поріг=0.65 ціна=4130.48
+2026-07-09 19:21:46,586 [INFO] main: P(buy)=0.455 P(sell)=0.388 поріг=0.65 ціна=4131.52
+2026-07-09 19:22:17,838 [INFO] main: P(buy)=0.446 P(sell)=0.396 поріг=0.65 ціна=4131.27
+2026-07-09 19:22:51,236 [INFO] main: P(buy)=0.459 P(sell)=0.401 поріг=0.65 ціна=4130.27
+2026-07-09 19:23:21,489 [INFO] main: P(buy)=0.459 P(sell)=0.401 поріг=0.65 ціна=4130.28
+2026-07-09 19:23:49,496 [INFO] main: P(buy)=0.478 P(sell)=0.412 поріг=0.65 ціна=4129.54
+2026-07-09 19:24:20,703 [INFO] main: P(buy)=0.450 P(sell)=0.422 поріг=0.65 ціна=4129.97
+2026-07-09 19:24:51,938 [INFO] main: P(buy)=0.449 P(sell)=0.438 поріг=0.65 ціна=4130.01
+2026-07-09 19:25:23,146 [INFO] main: P(buy)=0.435 P(sell)=0.429 поріг=0.65 ціна=4130.73
+2026-07-09 19:25:54,365 [INFO] main: P(buy)=0.478 P(sell)=0.412 поріг=0.65 ціна=4129.50
+2026-07-09 19:26:35,654 [INFO] main: P(buy)=0.463 P(sell)=0.413 поріг=0.65 ціна=4129.77
+2026-07-09 19:27:01,254 [INFO] main: P(buy)=0.461 P(sell)=0.414 поріг=0.65 ціна=4129.33
+2026-07-09 19:27:31,493 [INFO] main: P(buy)=0.464 P(sell)=0.408 поріг=0.65 ціна=4129.41
+2026-07-09 19:28:11,965 [INFO] main: P(buy)=0.435 P(sell)=0.429 поріг=0.65 ціна=4130.73
+2026-07-09 19:28:42,397 [INFO] main: P(buy)=0.435 P(sell)=0.429 поріг=0.65 ціна=4130.74
+2026-07-09 19:29:15,827 [INFO] main: P(buy)=0.455 P(sell)=0.388 поріг=0.65 ціна=4131.54
+2026-07-09 19:29:47,033 [INFO] main: P(buy)=0.458 P(sell)=0.363 поріг=0.65 ціна=4132.48
+2026-07-09 19:30:20,528 [INFO] main: P(buy)=0.446 P(sell)=0.361 поріг=0.65 ціна=4133.89
+2026-07-09 19:30:51,710 [INFO] main: P(buy)=0.446 P(sell)=0.361 поріг=0.65 ціна=4133.92
+2026-07-09 19:31:22,942 [INFO] main: P(buy)=0.452 P(sell)=0.349 поріг=0.65 ціна=4133.78
+2026-07-09 19:31:54,185 [INFO] main: P(buy)=0.475 P(sell)=0.384 поріг=0.65 ціна=4134.74
+2026-07-09 19:32:24,629 [INFO] main: P(buy)=0.464 P(sell)=0.391 поріг=0.65 ціна=4135.47
+2026-07-09 19:33:03,570 [INFO] main: P(buy)=0.475 P(sell)=0.373 поріг=0.65 ціна=4137.54
+2026-07-09 19:33:37,042 [INFO] main: P(buy)=0.466 P(sell)=0.355 поріг=0.65 ціна=4137.01
+2026-07-09 19:34:08,357 [INFO] main: P(buy)=0.442 P(sell)=0.399 поріг=0.65 ціна=4135.85
+2026-07-09 19:34:44,222 [INFO] main: P(buy)=0.410 P(sell)=0.397 поріг=0.65 ціна=4135.07
+2026-07-09 19:35:15,534 [INFO] main: P(buy)=0.415 P(sell)=0.413 поріг=0.65 ціна=4134.74
+2026-07-09 19:35:51,398 [INFO] main: P(buy)=0.420 P(sell)=0.427 поріг=0.65 ціна=4134.49
+2026-07-09 19:36:27,280 [INFO] main: P(buy)=0.410 P(sell)=0.386 поріг=0.65 ціна=4134.99
+2026-07-09 19:37:05,474 [INFO] main: P(buy)=0.420 P(sell)=0.427 поріг=0.65 ціна=4134.51
+2026-07-09 19:37:31,102 [INFO] main: P(buy)=0.411 P(sell)=0.417 поріг=0.65 ціна=4134.64
+2026-07-09 19:38:02,279 [INFO] main: P(buy)=0.420 P(sell)=0.440 поріг=0.65 ціна=4134.46
+2026-07-09 19:38:32,692 [INFO] main: P(buy)=0.443 P(sell)=0.437 поріг=0.65 ціна=4133.61
+2026-07-09 19:39:06,103 [INFO] main: P(buy)=0.451 P(sell)=0.433 поріг=0.65 ціна=4132.91
+2026-07-09 19:39:47,384 [INFO] main: P(buy)=0.465 P(sell)=0.418 поріг=0.65 ціна=4132.64
+2026-07-09 19:40:18,643 [INFO] main: P(buy)=0.465 P(sell)=0.414 поріг=0.65 ціна=4132.49
+2026-07-09 19:40:46,422 [INFO] main: P(buy)=0.465 P(sell)=0.414 поріг=0.65 ціна=4132.48
+2026-07-09 19:41:19,808 [INFO] main: P(buy)=0.451 P(sell)=0.438 поріг=0.65 ціна=4132.82
+2026-07-09 19:41:51,026 [INFO] main: P(buy)=0.451 P(sell)=0.433 поріг=0.65 ціна=4132.90
+2026-07-09 19:42:24,473 [INFO] main: P(buy)=0.465 P(sell)=0.418 поріг=0.65 ціна=4132.36
+2026-07-09 19:47:42,052 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:42,855 [INFO] main: P(buy)=0.465 P(sell)=0.382 поріг=0.65 ціна=4132.70
+2026-07-09 19:47:44,861 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:46,867 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:48,870 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:50,872 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:52,877 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:54,881 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:56,885 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:47:58,890 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:48:00,894 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:48:02,898 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:48:04,903 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:48:06,908 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-09 19:48:08,911 [ERROR] telegram_commands: Не вдалось отримати Telegram updates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8727515077:AAEV8M_hk8TVxpdy1EsffsaY9M6JvQRwrks/getUpdates?timeout=0&allowed_updates=message&offset=781181447 (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+2026-07-10 09:56:03,862 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-10 09:56:10,597 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-10 09:56:10,728 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-10 09:56:10,732 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-10 09:56:11,259 [INFO] main: P(buy)=0.365 P(sell)=0.454 поріг=0.65 ціна=4111.77
+2026-07-10 09:56:29,338 [INFO] telegram_commands: Telegram command: /start from chat_id=909089071
+2026-07-10 09:56:45,403 [INFO] main: P(buy)=0.361 P(sell)=0.456 поріг=0.65 ціна=4112.10
+2026-07-10 09:57:16,612 [INFO] main: P(buy)=0.353 P(sell)=0.496 поріг=0.65 ціна=4113.83
+2026-07-10 09:57:47,796 [INFO] main: P(buy)=0.353 P(sell)=0.496 поріг=0.65 ціна=4113.83
+2026-07-10 09:58:18,995 [INFO] main: P(buy)=0.374 P(sell)=0.454 поріг=0.65 ціна=4112.75
+2026-07-10 09:58:50,130 [INFO] main: P(buy)=0.358 P(sell)=0.458 поріг=0.65 ціна=4111.89
+2026-07-10 09:59:21,298 [INFO] main: P(buy)=0.361 P(sell)=0.452 поріг=0.65 ціна=4112.21
+2026-07-10 09:59:52,583 [INFO] main: P(buy)=0.358 P(sell)=0.456 поріг=0.65 ціна=4111.93
+2026-07-10 10:00:23,726 [INFO] main: P(buy)=0.367 P(sell)=0.350 поріг=0.65 ціна=4110.68
+2026-07-10 10:00:54,882 [INFO] main: P(buy)=0.309 P(sell)=0.380 поріг=0.65 ціна=4111.26
+2026-07-10 10:01:26,022 [INFO] main: P(buy)=0.314 P(sell)=0.380 поріг=0.65 ціна=4111.16
+2026-07-10 10:01:57,156 [INFO] main: P(buy)=0.346 P(sell)=0.357 поріг=0.65 ціна=4112.37
+2026-07-10 10:02:28,325 [INFO] main: P(buy)=0.300 P(sell)=0.376 поріг=0.65 ціна=4111.56
+2026-07-10 10:02:59,484 [INFO] main: P(buy)=0.307 P(sell)=0.379 поріг=0.65 ціна=4111.31
+2026-07-10 10:03:30,659 [INFO] main: P(buy)=0.346 P(sell)=0.343 поріг=0.65 ціна=4112.62
+2026-07-10 10:04:01,787 [INFO] main: P(buy)=0.360 P(sell)=0.317 поріг=0.65 ціна=4112.93
+2026-07-10 10:04:33,038 [INFO] main: P(buy)=0.330 P(sell)=0.345 поріг=0.65 ціна=4112.85
+2026-07-10 10:05:04,185 [INFO] main: P(buy)=0.348 P(sell)=0.359 поріг=0.65 ціна=4112.30
+2026-07-10 10:05:35,355 [INFO] main: P(buy)=0.350 P(sell)=0.346 поріг=0.65 ціна=4112.64
+2026-07-10 10:06:06,513 [INFO] main: P(buy)=0.350 P(sell)=0.347 поріг=0.65 ціна=4112.85
+2026-07-10 10:06:37,659 [INFO] main: P(buy)=0.345 P(sell)=0.364 поріг=0.65 ціна=4113.31
+2026-07-10 10:07:08,789 [INFO] main: P(buy)=0.345 P(sell)=0.350 поріг=0.65 ціна=4113.36
+2026-07-10 10:07:39,935 [INFO] main: P(buy)=0.327 P(sell)=0.367 поріг=0.65 ціна=4112.54
+2026-07-10 10:08:11,069 [INFO] main: P(buy)=0.319 P(sell)=0.427 поріг=0.65 ціна=4111.99
+2026-07-10 10:08:42,184 [INFO] main: P(buy)=0.345 P(sell)=0.370 поріг=0.65 ціна=4109.71
+2026-07-10 10:09:13,342 [INFO] main: P(buy)=0.373 P(sell)=0.378 поріг=0.65 ціна=4110.81
+2026-07-10 10:09:44,473 [INFO] main: P(buy)=0.339 P(sell)=0.374 поріг=0.65 ціна=4111.11
+2026-07-10 10:10:15,636 [INFO] main: P(buy)=0.368 P(sell)=0.378 поріг=0.65 ціна=4111.01
+2026-07-10 10:10:46,743 [INFO] main: P(buy)=0.368 P(sell)=0.378 поріг=0.65 ціна=4110.89
+2026-07-10 10:11:17,917 [INFO] main: P(buy)=0.350 P(sell)=0.371 поріг=0.65 ціна=4110.34
+2026-07-10 10:11:49,066 [INFO] main: P(buy)=0.327 P(sell)=0.383 поріг=0.65 ціна=4110.02
+2026-07-10 10:11:51,469 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-10 10:11:56,741 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-10 10:12:12,275 [INFO] telegram_commands: Telegram command: /price from chat_id=577462665
+2026-07-10 10:12:18,812 [INFO] telegram_commands: Telegram command: /help from chat_id=577462665
+2026-07-10 10:12:19,264 [INFO] main: P(buy)=0.355 P(sell)=0.371 поріг=0.65 ціна=4110.39
+2026-07-10 10:12:24,037 [INFO] telegram_commands: Telegram command: /start from chat_id=577462665
+2026-07-10 10:12:50,317 [INFO] main: P(buy)=0.341 P(sell)=0.361 поріг=0.65 ціна=4109.70
+2026-07-10 10:13:21,552 [INFO] main: P(buy)=0.372 P(sell)=0.364 поріг=0.65 ціна=4110.41
+2026-07-10 10:13:52,899 [INFO] main: P(buy)=0.331 P(sell)=0.384 поріг=0.65 ціна=4111.99
+2026-07-10 10:14:24,046 [INFO] main: P(buy)=0.336 P(sell)=0.371 поріг=0.65 ціна=4111.11
+2026-07-10 10:14:55,241 [INFO] main: P(buy)=0.346 P(sell)=0.371 поріг=0.65 ціна=4111.10
+2026-07-10 10:15:26,422 [INFO] main: P(buy)=0.336 P(sell)=0.363 поріг=0.65 ціна=4109.41
+2026-07-10 10:15:57,586 [INFO] main: P(buy)=0.351 P(sell)=0.364 поріг=0.65 ціна=4109.05
+2026-07-10 10:16:28,771 [INFO] main: P(buy)=0.366 P(sell)=0.364 поріг=0.65 ціна=4110.25
+2026-07-10 10:16:59,982 [INFO] main: P(buy)=0.346 P(sell)=0.363 поріг=0.65 ціна=4109.39
+2026-07-10 10:17:31,252 [INFO] main: P(buy)=0.359 P(sell)=0.358 поріг=0.65 ціна=4110.56
+2026-07-10 10:18:02,468 [INFO] main: P(buy)=0.359 P(sell)=0.354 поріг=0.65 ціна=4110.66
+2026-07-10 10:18:33,703 [INFO] main: P(buy)=0.367 P(sell)=0.362 поріг=0.65 ціна=4113.03
+2026-07-10 10:19:04,850 [INFO] main: P(buy)=0.391 P(sell)=0.408 поріг=0.65 ціна=4114.04
+2026-07-10 10:19:36,092 [INFO] main: P(buy)=0.370 P(sell)=0.362 поріг=0.65 ціна=4113.68
+2026-07-10 10:20:07,310 [INFO] main: P(buy)=0.388 P(sell)=0.369 поріг=0.65 ціна=4114.09
+2026-07-10 10:20:38,494 [INFO] main: P(buy)=0.388 P(sell)=0.367 поріг=0.65 ціна=4114.05
+2026-07-10 10:21:09,663 [INFO] main: P(buy)=0.336 P(sell)=0.370 поріг=0.65 ціна=4114.95
+2026-07-10 10:21:40,787 [INFO] main: P(buy)=0.357 P(sell)=0.426 поріг=0.65 ціна=4115.52
+2026-07-10 10:22:11,942 [INFO] main: P(buy)=0.346 P(sell)=0.367 поріг=0.65 ціна=4115.06
+2026-07-10 10:22:43,119 [INFO] main: P(buy)=0.353 P(sell)=0.384 поріг=0.65 ціна=4114.26
+2026-07-10 10:23:14,420 [INFO] main: P(buy)=0.354 P(sell)=0.379 поріг=0.65 ціна=4113.26
+2026-07-10 10:23:45,583 [INFO] main: P(buy)=0.350 P(sell)=0.390 поріг=0.65 ціна=4112.71
+2026-07-10 10:24:16,705 [INFO] main: P(buy)=0.354 P(sell)=0.392 поріг=0.65 ціна=4113.55
+2026-07-10 10:24:47,856 [INFO] main: P(buy)=0.366 P(sell)=0.371 поріг=0.65 ціна=4113.91
+2026-07-10 10:25:18,993 [INFO] main: P(buy)=0.364 P(sell)=0.371 поріг=0.65 ціна=4113.86
+2026-07-10 10:25:50,168 [INFO] main: P(buy)=0.362 P(sell)=0.371 поріг=0.65 ціна=4113.98
+2026-07-10 10:26:21,381 [INFO] main: P(buy)=0.364 P(sell)=0.373 поріг=0.65 ціна=4113.79
+2026-07-10 10:26:52,586 [INFO] main: P(buy)=0.354 P(sell)=0.379 поріг=0.65 ціна=4113.18
+2026-07-10 10:27:23,751 [INFO] main: P(buy)=0.354 P(sell)=0.379 поріг=0.65 ціна=4113.30
+2026-07-10 10:27:55,000 [INFO] main: P(buy)=0.350 P(sell)=0.390 поріг=0.65 ціна=4112.72
+2026-07-10 10:28:26,197 [INFO] main: P(buy)=0.350 P(sell)=0.381 поріг=0.65 ціна=4112.91
+2026-07-10 10:28:57,433 [INFO] main: P(buy)=0.355 P(sell)=0.381 поріг=0.65 ціна=4113.11
+2026-07-10 10:29:28,591 [INFO] main: P(buy)=0.350 P(sell)=0.390 поріг=0.65 ціна=4112.73
+2026-07-10 10:29:59,739 [INFO] main: P(buy)=0.350 P(sell)=0.385 поріг=0.65 ціна=4112.56
+2026-07-10 10:30:30,879 [INFO] main: P(buy)=0.354 P(sell)=0.392 поріг=0.65 ціна=4113.52
+2026-07-10 10:31:02,006 [INFO] main: P(buy)=0.347 P(sell)=0.394 поріг=0.65 ціна=4114.19
+2026-07-10 10:31:33,199 [INFO] main: P(buy)=0.356 P(sell)=0.389 поріг=0.65 ціна=4113.43
+2026-07-10 10:32:04,402 [INFO] main: P(buy)=0.373 P(sell)=0.371 поріг=0.65 ціна=4114.59
+2026-07-10 10:32:35,632 [INFO] main: P(buy)=0.374 P(sell)=0.371 поріг=0.65 ціна=4114.48
+2026-07-10 10:33:06,855 [INFO] main: P(buy)=0.364 P(sell)=0.373 поріг=0.65 ціна=4113.81
+2026-07-10 10:33:38,022 [INFO] main: P(buy)=0.350 P(sell)=0.389 поріг=0.65 ціна=4112.78
+2026-07-10 10:34:09,177 [INFO] main: P(buy)=0.350 P(sell)=0.390 поріг=0.65 ціна=4112.73
+2026-07-10 10:34:40,350 [INFO] main: P(buy)=0.346 P(sell)=0.384 поріг=0.65 ціна=4112.98
+2026-07-10 10:35:21,601 [INFO] main: P(buy)=0.363 P(sell)=0.410 поріг=0.65 ціна=4113.69
+2026-07-10 10:35:45,267 [INFO] main: P(buy)=0.350 P(sell)=0.389 поріг=0.65 ціна=4113.47
+2026-07-10 10:36:16,525 [INFO] main: P(buy)=0.350 P(sell)=0.406 поріг=0.65 ціна=4112.29
+2026-07-10 10:36:55,388 [INFO] main: P(buy)=0.312 P(sell)=0.409 поріг=0.65 ціна=4112.06
+2026-07-10 10:37:26,668 [INFO] main: P(buy)=0.357 P(sell)=0.402 поріг=0.65 ціна=4110.82
+2026-07-10 10:37:54,704 [INFO] main: P(buy)=0.319 P(sell)=0.407 поріг=0.65 ціна=4112.12
+2026-07-10 10:38:26,060 [INFO] main: P(buy)=0.306 P(sell)=0.434 поріг=0.65 ціна=4111.35
+2026-07-10 10:38:59,580 [INFO] main: P(buy)=0.325 P(sell)=0.420 поріг=0.65 ціна=4111.72
+2026-07-10 10:39:30,874 [INFO] main: P(buy)=0.332 P(sell)=0.421 поріг=0.65 ціна=4111.25
+2026-07-10 10:39:58,896 [INFO] main: P(buy)=0.311 P(sell)=0.411 поріг=0.65 ціна=4111.82
+2026-07-10 10:40:32,363 [INFO] main: P(buy)=0.339 P(sell)=0.403 поріг=0.65 ціна=4111.11
+2026-07-10 10:41:05,794 [INFO] main: P(buy)=0.357 P(sell)=0.402 поріг=0.65 ціна=4110.80
+2026-07-10 10:41:39,235 [INFO] main: P(buy)=0.355 P(sell)=0.390 поріг=0.65 ціна=4110.01
+2026-07-10 10:42:10,479 [INFO] main: P(buy)=0.351 P(sell)=0.402 поріг=0.65 ціна=4110.93
+2026-07-10 10:42:48,738 [INFO] main: P(buy)=0.358 P(sell)=0.392 поріг=0.65 ціна=4110.43
+2026-07-10 10:43:08,948 [INFO] main: P(buy)=0.355 P(sell)=0.397 поріг=0.65 ціна=4110.27
+2026-07-10 10:43:40,170 [INFO] main: P(buy)=0.366 P(sell)=0.398 поріг=0.65 ціна=4109.86
+2026-07-10 10:44:13,601 [INFO] main: P(buy)=0.319 P(sell)=0.456 поріг=0.65 ціна=4106.96
+2026-07-10 10:44:44,840 [INFO] main: P(buy)=0.327 P(sell)=0.482 поріг=0.65 ціна=4105.68
+2026-07-10 10:45:16,069 [INFO] main: P(buy)=0.337 P(sell)=0.450 поріг=0.65 ціна=4107.00
+2026-07-10 10:45:47,341 [INFO] main: P(buy)=0.319 P(sell)=0.476 поріг=0.65 ціна=4106.03
+2026-07-10 10:46:18,606 [INFO] main: P(buy)=0.337 P(sell)=0.452 поріг=0.65 ціна=4106.97
+2026-07-10 10:46:57,491 [INFO] main: P(buy)=0.350 P(sell)=0.455 поріг=0.65 ціна=4106.56
+2026-07-10 10:47:27,960 [INFO] main: P(buy)=0.330 P(sell)=0.467 поріг=0.65 ціна=4104.82
+2026-07-10 10:48:01,443 [INFO] main: P(buy)=0.332 P(sell)=0.478 поріг=0.65 ціна=4104.68
+2026-07-10 10:48:32,716 [INFO] main: P(buy)=0.324 P(sell)=0.501 поріг=0.65 ціна=4105.49
+2026-07-10 10:49:04,060 [INFO] main: P(buy)=0.339 P(sell)=0.467 поріг=0.65 ціна=4105.98
+2026-07-10 10:49:37,586 [INFO] main: P(buy)=0.336 P(sell)=0.467 поріг=0.65 ціна=4105.78
+2026-07-10 10:50:15,805 [INFO] main: P(buy)=0.349 P(sell)=0.468 поріг=0.65 ціна=4105.67
+2026-07-10 10:50:46,874 [INFO] main: P(buy)=0.328 P(sell)=0.490 поріг=0.65 ціна=4107.07
+2026-07-10 10:51:14,876 [INFO] main: P(buy)=0.330 P(sell)=0.462 поріг=0.65 ціна=4107.48
+2026-07-10 10:51:48,316 [INFO] main: P(buy)=0.328 P(sell)=0.482 поріг=0.65 ціна=4107.02
+2026-07-10 10:52:19,578 [INFO] main: P(buy)=0.321 P(sell)=0.462 поріг=0.65 ціна=4107.35
+2026-07-10 10:53:02,393 [INFO] main: P(buy)=0.327 P(sell)=0.453 поріг=0.65 ціна=4106.68
+2026-07-10 10:53:25,825 [INFO] main: P(buy)=0.341 P(sell)=0.461 поріг=0.65 ціна=4108.08
+2026-07-10 10:53:57,084 [INFO] main: P(buy)=0.351 P(sell)=0.458 поріг=0.65 ціна=4107.90
+2026-07-10 10:54:38,355 [INFO] main: P(buy)=0.336 P(sell)=0.460 поріг=0.65 ціна=4108.66
+2026-07-10 10:55:06,381 [INFO] main: P(buy)=0.336 P(sell)=0.460 поріг=0.65 ціна=4108.65
+2026-07-10 10:55:37,560 [INFO] main: P(buy)=0.338 P(sell)=0.464 поріг=0.65 ціна=4108.92
+2026-07-10 10:56:08,871 [INFO] main: P(buy)=0.321 P(sell)=0.462 поріг=0.65 ціна=4107.35
+2026-07-10 10:56:47,783 [INFO] main: P(buy)=0.327 P(sell)=0.453 поріг=0.65 ціна=4106.70
+2026-07-10 10:57:19,670 [INFO] main: P(buy)=0.325 P(sell)=0.490 поріг=0.65 ціна=4107.10
+2026-07-10 10:57:50,891 [INFO] main: P(buy)=0.336 P(sell)=0.435 поріг=0.65 ціна=4106.34
+2026-07-10 10:58:18,898 [INFO] main: P(buy)=0.321 P(sell)=0.486 поріг=0.65 ціна=4107.20
+2026-07-10 10:58:50,215 [INFO] main: P(buy)=0.335 P(sell)=0.451 поріг=0.65 ціна=4108.02
+2026-07-10 10:59:21,473 [INFO] main: P(buy)=0.336 P(sell)=0.464 поріг=0.65 ціна=4108.40
+2026-07-10 10:59:52,926 [INFO] main: P(buy)=0.338 P(sell)=0.464 поріг=0.65 ціна=4109.05
+2026-07-10 11:00:24,356 [INFO] main: P(buy)=0.266 P(sell)=0.467 поріг=0.65 ціна=4107.91
+2026-07-10 11:01:05,567 [INFO] main: P(buy)=0.321 P(sell)=0.476 поріг=0.65 ціна=4107.26
+2026-07-10 11:01:29,000 [INFO] main: P(buy)=0.314 P(sell)=0.494 поріг=0.65 ціна=4106.21
+2026-07-10 11:02:00,462 [INFO] main: P(buy)=0.319 P(sell)=0.546 поріг=0.65 ціна=4105.59
+2026-07-10 11:02:41,734 [INFO] main: P(buy)=0.319 P(sell)=0.547 поріг=0.65 ціна=4105.51
+2026-07-10 11:03:12,966 [INFO] main: P(buy)=0.368 P(sell)=0.502 поріг=0.65 ціна=4104.75
+2026-07-10 11:03:43,443 [INFO] main: P(buy)=0.334 P(sell)=0.427 поріг=0.65 ціна=4105.38
+2026-07-10 11:04:14,858 [INFO] main: P(buy)=0.323 P(sell)=0.491 поріг=0.65 ціна=4105.86
+2026-07-10 11:04:46,118 [INFO] main: P(buy)=0.334 P(sell)=0.459 поріг=0.65 ціна=4105.45
+2026-07-10 11:05:19,561 [INFO] main: P(buy)=0.329 P(sell)=0.507 поріг=0.65 ціна=4104.81
+2026-07-10 11:05:52,985 [INFO] main: P(buy)=0.324 P(sell)=0.491 поріг=0.65 ціна=4105.91
+2026-07-10 11:06:24,234 [INFO] main: P(buy)=0.323 P(sell)=0.491 поріг=0.65 ціна=4105.93
+2026-07-10 11:06:57,671 [INFO] main: P(buy)=0.272 P(sell)=0.543 поріг=0.65 ціна=4107.58
+2026-07-10 11:07:28,933 [INFO] main: P(buy)=0.305 P(sell)=0.509 поріг=0.65 ціна=4107.98
+2026-07-10 11:08:00,184 [INFO] main: P(buy)=0.334 P(sell)=0.507 поріг=0.65 ціна=4107.15
+2026-07-10 11:08:31,508 [INFO] main: P(buy)=0.319 P(sell)=0.596 поріг=0.65 ціна=4106.55
+2026-07-10 11:09:02,799 [INFO] main: P(buy)=0.316 P(sell)=0.506 поріг=0.65 ціна=4106.05
+2026-07-10 11:09:34,057 [INFO] main: P(buy)=0.264 P(sell)=0.543 поріг=0.65 ціна=4107.44
+2026-07-10 11:10:05,280 [INFO] main: P(buy)=0.327 P(sell)=0.507 поріг=0.65 ціна=4107.21
+2026-07-10 11:10:46,597 [INFO] main: P(buy)=0.323 P(sell)=0.491 поріг=0.65 ціна=4105.89
+2026-07-10 11:11:17,710 [INFO] main: P(buy)=0.314 P(sell)=0.570 поріг=0.65 ціна=4106.69
+2026-07-10 11:11:53,571 [INFO] main: P(buy)=0.304 P(sell)=0.537 поріг=0.65 ціна=4106.76
+2026-07-10 11:12:32,253 [INFO] main: P(buy)=0.320 P(sell)=0.506 поріг=0.65 ціна=4106.16
+2026-07-10 11:12:52,520 [INFO] main: P(buy)=0.320 P(sell)=0.510 поріг=0.65 ціна=4106.27
+2026-07-10 11:13:23,822 [INFO] main: P(buy)=0.324 P(sell)=0.498 поріг=0.65 ціна=4105.97
+2026-07-10 11:13:55,327 [INFO] main: P(buy)=0.320 P(sell)=0.510 поріг=0.65 ціна=4106.32
+2026-07-10 11:14:43,377 [INFO] main: P(buy)=0.316 P(sell)=0.506 поріг=0.65 ціна=4106.13
+2026-07-10 11:15:06,596 [INFO] main: P(buy)=0.268 P(sell)=0.550 поріг=0.65 ціна=4107.52
+2026-07-10 11:15:44,888 [INFO] main: P(buy)=0.304 P(sell)=0.537 поріг=0.65 ціна=4106.76
+2026-07-10 11:16:08,139 [INFO] main: P(buy)=0.334 P(sell)=0.507 поріг=0.65 ціна=4107.10
+2026-07-10 11:16:39,314 [INFO] main: P(buy)=0.278 P(sell)=0.538 поріг=0.65 ціна=4107.24
+2026-07-10 11:17:12,854 [INFO] main: P(buy)=0.312 P(sell)=0.517 поріг=0.65 ціна=4106.98
+2026-07-10 11:17:40,894 [INFO] main: P(buy)=0.314 P(sell)=0.570 поріг=0.65 ціна=4106.64
+2026-07-10 11:18:12,166 [INFO] main: P(buy)=0.314 P(sell)=0.570 поріг=0.65 ціна=4106.57
+2026-07-10 11:18:45,760 [INFO] main: P(buy)=0.292 P(sell)=0.551 поріг=0.65 ціна=4107.69
+2026-07-10 11:19:27,026 [INFO] main: P(buy)=0.292 P(sell)=0.529 поріг=0.65 ціна=4107.80
+2026-07-10 11:19:58,279 [INFO] main: P(buy)=0.292 P(sell)=0.529 поріг=0.65 ціна=4107.80
+2026-07-10 11:20:26,407 [INFO] main: P(buy)=0.285 P(sell)=0.478 поріг=0.65 ціна=4108.85
+2026-07-10 11:20:57,823 [INFO] main: P(buy)=0.292 P(sell)=0.529 поріг=0.65 ціна=4107.74
+2026-07-10 11:21:36,266 [INFO] main: P(buy)=0.264 P(sell)=0.547 поріг=0.65 ціна=4107.44
+2026-07-10 11:22:17,535 [INFO] main: P(buy)=0.307 P(sell)=0.520 поріг=0.65 ціна=4107.02
+2026-07-10 11:22:45,582 [INFO] main: P(buy)=0.300 P(sell)=0.516 поріг=0.65 ціна=4107.05
+2026-07-10 11:23:26,846 [INFO] main: P(buy)=0.312 P(sell)=0.522 поріг=0.65 ціна=4106.94
+2026-07-10 11:23:50,294 [INFO] main: P(buy)=0.305 P(sell)=0.537 поріг=0.65 ціна=4106.81
+2026-07-10 11:24:23,782 [INFO] main: P(buy)=0.323 P(sell)=0.491 поріг=0.65 ціна=4105.88
+2026-07-10 11:25:02,747 [INFO] main: P(buy)=0.323 P(sell)=0.483 поріг=0.65 ціна=4105.68
+2026-07-10 11:25:30,792 [INFO] main: P(buy)=0.333 P(sell)=0.492 поріг=0.65 ціна=4105.28
+2026-07-10 11:26:01,978 [INFO] main: P(buy)=0.331 P(sell)=0.499 поріг=0.65 ціна=4105.09
+2026-07-10 11:26:33,270 [INFO] main: P(buy)=0.340 P(sell)=0.476 поріг=0.65 ціна=4104.34
+2026-07-10 11:27:12,169 [INFO] main: P(buy)=0.351 P(sell)=0.492 поріг=0.65 ціна=4105.18
+2026-07-10 11:27:43,392 [INFO] main: P(buy)=0.327 P(sell)=0.500 поріг=0.65 ціна=4103.99
+2026-07-10 11:28:19,214 [INFO] main: P(buy)=0.329 P(sell)=0.500 поріг=0.65 ціна=4104.14
+2026-07-10 11:28:49,686 [INFO] main: P(buy)=0.332 P(sell)=0.450 поріг=0.65 ціна=4105.31
+2026-07-10 11:29:23,147 [INFO] main: P(buy)=0.331 P(sell)=0.500 поріг=0.65 ціна=4104.20
+2026-07-10 11:29:51,186 [INFO] main: P(buy)=0.329 P(sell)=0.502 поріг=0.65 ціна=4104.10
+2026-07-10 11:30:24,620 [INFO] main: P(buy)=0.340 P(sell)=0.399 поріг=0.65 ціна=4104.92
+2026-07-10 11:31:05,911 [INFO] main: P(buy)=0.340 P(sell)=0.438 поріг=0.65 ціна=4104.94
+2026-07-10 11:31:33,932 [INFO] main: P(buy)=0.340 P(sell)=0.438 поріг=0.65 ціна=4104.94
+2026-07-10 11:32:06,601 [INFO] main: P(buy)=0.342 P(sell)=0.463 поріг=0.65 ціна=4104.67
+2026-07-10 11:32:38,317 [INFO] main: P(buy)=0.342 P(sell)=0.463 поріг=0.65 ціна=4104.62
+2026-07-10 11:33:11,812 [INFO] main: P(buy)=0.334 P(sell)=0.497 поріг=0.65 ціна=4103.78
+2026-07-10 11:33:49,321 [INFO] main: P(buy)=0.340 P(sell)=0.493 поріг=0.65 ціна=4103.30
+2026-07-10 11:34:12,816 [INFO] main: P(buy)=0.348 P(sell)=0.498 поріг=0.65 ціна=4102.99
+2026-07-10 11:34:51,733 [INFO] main: P(buy)=0.325 P(sell)=0.520 поріг=0.65 ціна=4102.61
+2026-07-10 11:35:23,263 [INFO] main: P(buy)=0.339 P(sell)=0.513 поріг=0.65 ціна=4102.25
+2026-07-10 11:35:53,751 [INFO] main: P(buy)=0.326 P(sell)=0.535 поріг=0.65 ціна=4102.18
+2026-07-10 11:36:27,184 [INFO] main: P(buy)=0.324 P(sell)=0.519 поріг=0.65 ціна=4101.99
+2026-07-10 11:37:07,627 [INFO] main: P(buy)=0.403 P(sell)=0.472 поріг=0.65 ціна=4100.23
+2026-07-10 11:37:27,913 [INFO] main: P(buy)=0.370 P(sell)=0.456 поріг=0.65 ціна=4100.77
+2026-07-10 11:37:59,155 [INFO] main: P(buy)=0.333 P(sell)=0.410 поріг=0.65 ціна=4101.35
+2026-07-10 11:38:30,747 [INFO] main: P(buy)=0.312 P(sell)=0.513 поріг=0.65 ціна=4102.04
+2026-07-10 11:39:08,822 [INFO] main: P(buy)=0.319 P(sell)=0.445 поріг=0.65 ціна=4101.83
+2026-07-10 11:39:46,881 [INFO] main: P(buy)=0.319 P(sell)=0.462 поріг=0.65 ціна=4102.76
+2026-07-10 11:40:28,216 [INFO] main: P(buy)=0.319 P(sell)=0.444 поріг=0.65 ціна=4101.77
+2026-07-10 11:41:16,455 [INFO] main: P(buy)=0.322 P(sell)=0.448 поріг=0.65 ціна=4101.42
+2026-07-10 11:41:39,914 [INFO] main: P(buy)=0.325 P(sell)=0.437 поріг=0.65 ціна=4101.44
+2026-07-10 11:42:11,178 [INFO] main: P(buy)=0.333 P(sell)=0.410 поріг=0.65 ціна=4101.29
+2026-07-10 11:42:44,668 [INFO] main: P(buy)=0.374 P(sell)=0.501 поріг=0.65 ціна=4100.02

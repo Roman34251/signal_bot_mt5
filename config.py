@@ -74,6 +74,9 @@ class LevelsConfig:
     tp4_atr_mult: float = _get_float("LEVELS_TP4_ATR_MULT", 5.0)
     # Ширина зони входу (Entry: 4148-4151), у пунктах ціни золота
     entry_zone_points: float = _get_float("LEVELS_ENTRY_ZONE_POINTS", 3.0)
+    # Захист від широкого спреду (нічна сесія, новини): якщо spread > ATR * цей
+    # коефіцієнт — сигнал пропускається, бо TP1 (0.8*ATR) з'їдається спредом.
+    max_spread_atr_ratio: float = _get_float("LEVELS_MAX_SPREAD_ATR_RATIO", 0.15)
 
 
 @dataclass
