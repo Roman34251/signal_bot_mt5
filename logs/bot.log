@@ -429,3 +429,20 @@ TypeError: send_text() got an unexpected keyword argument 'chat_id'
 2026-07-10 11:41:39,914 [INFO] main: P(buy)=0.325 P(sell)=0.437 поріг=0.65 ціна=4101.44
 2026-07-10 11:42:11,178 [INFO] main: P(buy)=0.333 P(sell)=0.410 поріг=0.65 ціна=4101.29
 2026-07-10 11:42:44,668 [INFO] main: P(buy)=0.374 P(sell)=0.501 поріг=0.65 ціна=4100.02
+2026-07-10 11:43:18,134 [INFO] main: P(buy)=0.333 P(sell)=0.419 поріг=0.65 ціна=4101.24
+2026-07-10 11:43:40,936 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-10 11:43:42,232 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-10 11:43:42,325 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-10 11:43:42,328 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-10 11:43:42,783 [INFO] main: Свічка 2026-07-10 10:00:00 | P(buy)=0.338 P(sell)=0.462 поріг=0.65 | bid=4102.03 ask=4102.20 spread=0.17 ATR=12.99
+2026-07-10 11:43:42,783 [ERROR] main: Heartbeat НЕ доставлено в Telegram — перевірте TELEGRAM_CHAT_ID / TELEGRAM_BOT_TOKEN у .env
+2026-07-10 11:44:41,156 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-10 11:44:42,421 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-10 11:44:42,504 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-10 11:44:42,507 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-10 11:44:42,967 [INFO] main: Свічка 2026-07-10 10:00:00 | P(buy)=0.338 P(sell)=0.462 поріг=0.65 | bid=4101.51 ask=4101.81 spread=0.30 ATR=12.99
+2026-07-10 11:46:10,829 [INFO] main: Запуск signal bot (MT5 + XGBoost)
+2026-07-10 11:46:12,085 [INFO] storage: БД ініціалізовано: signals.db
+2026-07-10 11:46:12,187 [INFO] ml_model: Модель завантажено з models/xgb_xauusd.json
+2026-07-10 11:46:12,191 [INFO] mt5_client: MT5 підключено. Термінал: MetaTrader 5, рахунок: 1715547138
+2026-07-10 11:46:12,632 [INFO] main: Свічка 2026-07-10 10:00:00 | P(buy)=0.332 P(sell)=0.455 поріг=0.65 | bid=4099.72 ask=4100.19 spread=0.48 ATR=12.99
