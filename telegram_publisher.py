@@ -53,9 +53,25 @@ def _format_message(symbol: str, levels: SignalLevels, probability: float) -> st
     return "\n".join(lines)
 
 
+def _signal_target() -> str:
+    """Куди слати сигнал.
+
+    Публічний режим (TELEGRAM_PUBLIC_MODE=true) + заданий канал → у канал.
+    Інакше — приватно власнику (TELEGRAM_CHAT_ID).
+    """
+    if telegram_cfg.public_mode and telegram_cfg.channel_id:
+        return telegram_cfg.channel_id
+    return telegram_cfg.chat_id
+
+
 def send_signal(symbol: str, levels: SignalLevels, probability: float) -> bool:
-    if not telegram_cfg.bot_token or not telegram_cfg.chat_id:
-        logger.error("TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID не задані в .env")
+    target_chat_id = _signal_target()
+
+    if not telegram_cfg.bot_token or not target_chat_id:
+        logger.error(
+            "TELEGRAM_BOT_TOKEN відсутній, або немає адресата сигналу "
+            "(перевір TELEGRAM_CHANNEL_ID / TELEGRAM_CHAT_ID у .env)"
+        )
         return False
 
     text = _format_message(symbol, levels, probability)
@@ -63,11 +79,16 @@ def send_signal(symbol: str, levels: SignalLevels, probability: float) -> bool:
     try:
         resp = requests.post(
             url,
-            json={"chat_id": telegram_cfg.chat_id, "text": text},
+            json={"chat_id": target_chat_id, "text": text},
             timeout=15,
         )
         resp.raise_for_status()
-        logger.info("Сигнал %s %s надіслано в Telegram", levels.direction, symbol)
+        logger.info(
+            "Сигнал %s %s надіслано в Telegram (%s)",
+            levels.direction,
+            symbol,
+            target_chat_id,
+        )
         return True
     except requests.RequestException as e:
         logger.error("Помилка відправки в Telegram: %s", e)

@@ -56,22 +56,45 @@ class TelegramCommandPoller:
             "Доступ до команд має тільки власник.",
         )
 
+    def _channel_link(self) -> str | None:
+        """Посилання на канал сигналів для запрошення користувачів.
+        Працює для публічних каналів виду '@username'. Для числових -100... id
+        посилання не будуємо (немає публічного username)."""
+        ch = telegram_cfg.channel_id.strip()
+        if telegram_cfg.public_mode and ch.startswith("@"):
+            return f"https://t.me/{ch[1:]}"
+        return None
+
     def _handle_start(self, chat_id: int | str) -> None:
         visibility = "публічний" if telegram_cfg.public_commands else "приватний"
 
-        text = (
-            "✅ Бот запущений і готовий до роботи.\n\n"
-            f"Режим: {visibility}\n"
-            f"Поточний символ: {mt5_cfg.symbol}\n"
-            f"Таймфрейм: {mt5_cfg.timeframe}\n\n"
-            "Доступні команди:\n"
-            "/start — перевірити, що бот відповідає\n"
-            "/price — показати поточну ціну з MetaTrader 5\n"
-            "/help — список команд\n\n"
-            "⚠️ Це не фінансова порада."
-        )
+        lines = [
+            "✅ Бот запущений і готовий до роботи.",
+            "",
+            f"Режим: {visibility}",
+            f"Поточний символ: {mt5_cfg.symbol}",
+            f"Таймфрейм: {mt5_cfg.timeframe}",
+        ]
 
-        telegram_publisher.send_text_to_chat(chat_id, text)
+        link = self._channel_link()
+        if link:
+            lines += [
+                "",
+                "📢 Сигнали публікуються в каналі — підпишись, щоб їх отримувати:",
+                link,
+            ]
+
+        lines += [
+            "",
+            "Доступні команди:",
+            "/start — перевірити, що бот відповідає",
+            "/price — показати поточну ціну з MetaTrader 5",
+            "/help — список команд",
+            "",
+            "⚠️ Це не фінансова порада.",
+        ]
+
+        telegram_publisher.send_text_to_chat(chat_id, "\n".join(lines))
 
     def _handle_help(self, chat_id: int | str) -> None:
         text = (

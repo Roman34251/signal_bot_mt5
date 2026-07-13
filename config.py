@@ -82,7 +82,18 @@ class LevelsConfig:
 @dataclass
 class TelegramConfig:
     bot_token: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    # Приватний чат власника. Сюди йдуть службові повідомлення: heartbeat,
+    # self-test, помилки. НЕ публічний.
     chat_id: str = os.getenv("TELEGRAM_CHAT_ID", "")
+
+    # Публічний канал для сигналів (напр. "@XAU_nadianamilion" або "-100123...").
+    # Бот має бути адміном каналу з правом публікації.
+    channel_id: str = os.getenv("TELEGRAM_CHANNEL_ID", "")
+
+    # Головний вимикач публічності:
+    #   true  — сигнали йдуть у channel_id (публічний канал);
+    #   false — сигнали йдуть тільки власнику в chat_id (приватний режим).
+    public_mode: bool = _get_bool("TELEGRAM_PUBLIC_MODE", False)
 
     # Якщо true — будь-хто може писати /start і /price.
     # Якщо false — команди приймаються тільки від TELEGRAM_CHAT_ID.
