@@ -99,6 +99,10 @@ class TelegramConfig:
     # Якщо false — команди приймаються тільки від TELEGRAM_CHAT_ID.
     public_commands: bool = _get_bool("TELEGRAM_PUBLIC_COMMANDS", False)
 
+    # Якщо true — на кожну нову свічку слати власнику в приват рядок з
+    # P(buy)/P(sell)/порогом (діагностика, щоб бачити роботу моделі наживо).
+    send_probs: bool = _get_bool("TELEGRAM_SEND_PROBS", False)
+
     # Чи слати heartbeat "бот працює" раз на N хвилин
     heartbeat_enabled: bool = _get_bool("TELEGRAM_HEARTBEAT_ENABLED", True)
     heartbeat_interval_min: int = _get_int("TELEGRAM_HEARTBEAT_INTERVAL_MIN", 60)

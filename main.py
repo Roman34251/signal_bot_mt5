@@ -84,6 +84,17 @@ def run_iteration(client: "MT5Client", model: "SignalModel", last_bar_time):
         atr,
     )
 
+    # Діагностика власнику в приват: та сама інформація, що й у логах,
+    # щоб бачити пороги наживо. Вимикається TELEGRAM_SEND_PROBS=false.
+    if telegram_cfg.send_probs:
+        telegram_publisher.send_text(
+            f"🕯 Свічка {bar_time}\n"
+            f"P(buy)={prediction.probability_buy:.3f}  "
+            f"P(sell)={prediction.probability_sell:.3f}\n"
+            f"поріг={model_cfg.probability_threshold:.2f}\n"
+            f"bid={tick.bid:.2f} ask={tick.ask:.2f} spread={spread:.2f} ATR={atr:.2f}"
+        )
+
     if storage.is_in_cooldown(mt5_cfg.symbol):
         logger.debug("Cooldown активний, сигнал пропущено")
         return bar_time
